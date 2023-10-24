@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Nike</title>
+</head>
+<body class="font-poppins">
+    <!-- header -->
+    <header >
+        <nav class="container flex items-center py-2 mt-4 sm:mt-12 justify-between">
+            <!-- Logo on the left -->
+            <div class="py-1 w-2/5">
+                <img src="imgs/nike logo.png" alt="" class="xl:w-28 lg:w-20 sm:w-16 w-16 mx-auto">
+            </div>
+        
+            <!-- Links on the right -->
+            <div class="hidden md:flex flex-1">
+                <ul class="hidden md:flex flex-1 justify-end items-center gap-12 text-Nike-black uppercase text-sm px-8">
+                    <li class="cursor-pointer">Home</li>
+                    <li class="cursor-pointer">Features</li>
+                    <li class="cursor-pointer">Products</li>
+                    <li class="cursor-pointer">About</li>
+                </ul>
+                <button type="button" class="bg-Nike-orange text-white rounded-md px-7 py-3 uppercase">Login</button>
+            </div>
+
+                <div class='flex items-center flex-1 justify-end cursor-pointer z-50'>
+                        <nav class="md:hidden">
+                            <div class="relative" x-data="{ open: false }">
+                                <button @click="open = ! open" type="button" class="text-gray-500 group p-4 inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900" aria-expanded="false">
+                                    <i class="text-2xl text-Nike-orange fa-solid fa-bars"></i>
+                                </button>
+
+                                <div 
+                                    x-show="open" 
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 scale-90"
+                                    x-transition:enter-end="opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-200"
+                                    x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-90"
+                                    class="absolute left-1/2 z-full mt-3 -translate-x-1/2 transform px-2 sm:px-0">
+
+                                    <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 p-x">
+                                        <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+
+                                            <a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">Home</p>
+                                            </div>
+                                            </a>
+
+                                            <a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">Features</p>
+                                            </div>
+                                            </a>
+
+                                            <a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">Products</p>
+                                            </div>
+                                            </a>
+
+                                            <a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">About</p>
+                                            </div>
+                                            </a>
+
+                                            <button type="button" class="bg-Nike-orange text-white rounded-md px-7 py-3 uppercase">Login</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="relative">
+        <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
+            <!-- content -->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+                <h2 class="hero_h2 text-Nike-black text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
+                    Official Nike Page
+                </h2>
+                <p class="text-Nike-grey text-lg text-center lg:text-left mb-6" id="hero_p">
+                    Nike is an innovative, iconic, and global athletic brand, trendsetting in performance-driven, stylish products that empower and inspire individuals worldwide
+                </p>
+                <div class="flex justify-center flex-wrap gap-6" id="hero_btn">
+                    <button type="button" class="btn btn-orange hover:scale-110 hover:bg-Nike-red "> Discover More</button>
+                </div>
+            </div>
+
+            <!-- images -->
+            <div class="flex justify-center flex-1 mb-10 md:mb-15 lg:mb-0 z-10">
+                <swiper-container class="mySwiper my-4 w-60 h-72" effect="cards" grab-cursor="true">
+                        <swiper-slide class="swiper-slide flex items-center justify-center rounded-lg font-bold text-xl">
+                            <img src="./imgs/nike1.jpg" alt="">
+                        </swiper-slide>
+                        <swiper-slide class="swiper-slide flex items-center justify-center rounded-lg font-bold text-xl">
+                            <img src="./imgs/nike 2.jpg" alt="">
+                        </swiper-slide>
+                        <swiper-slide class="swiper-slide flex items-center justify-center rounded-lg font-bold text-xl">
+                            <img src="./imgs/nike 3.jpg" alt="">
+                        </swiper-slide>
+                </swiper-container>
+            </div>
+        </div>
+
+        <!-- rounded Rectangle -->
+        <div class="hidden lg:block overflow-hidden bg-Nike-orange rounded-l-full absolute h-80 w-2/4 top-32 right-0"></div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-Nike-white py-20 mt-20 lg:mt-60">
+        <!-- Heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-Nike-black">Features</h1>
+            <p class="text-center text-Nike-grey mt-4">innovative Nike shoes offer unmatched comfort, style, and performance for athletes</p>
+        </div>
+        <!-- feature #1 -->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- image -->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0" id="feature_img">
+                    <img src="./imgs/nike landscape 1.jpg" alt="" class="my-4 w-full h-72 sm:w-full md:max-w-full rounded-md">
+                </div>
+                <!-- content -->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-Nike-black" id="feature_h1">Nike Is The Future</h1>
+                    <p class="text-Nike-grey my-4 text-center lg:text-left sm-w-3/4 lg:w-full" id="feature_p">
+                        innovative Nike shoes offer unmatched comfort, style, and performance for athletes
+                    </p>
+                    <button type="button"class="btn btn-orange hover:scale-110 hover:bg-Nike-red">Buy Now</button>
+                </div>
+                <!-- rounded rectangle -->
+                <div class="hidden lg:block overflow-hidden bg-Nike-orange rounded-r-full absolute h-80 w-2/4 top-20 left-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- products -->
+    <section class="py-20 mt-20">
+        <!-- heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-Nike-black">Products</h1>
+            <p class="text-center text-Nike-grey mt-4">
+                Nike offers cutting-edge products designed for peak athletic performance and style.
+            </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
+            <!-- card #1 -->
+            <div class="flex flex-col rounded-md shadow-md lg:mb-16" id="product_1"> 
+                <div class="p-6 flex flex-col items-center">
+                    <img src="./imgs/products 2.jpg" alt="" class="rounded-md">
+                    <h3 class="mt-5 text-Nike-black text-lg">
+                        Air Max 97
+                    </h3>
+                </div>
+                <hr class="border-b border-Nike-white">
+                <div class="flex p-6">
+                    <button type="button" class="flex-1 btn btn-orange hover:scale-110 hover:bg-Nike-red ">Buy Now</button>
+                </div>
+            </div>
+            <!-- card #2 -->
+            <div class="flex flex-col rounded-md shadow-md lg:my-8" id="product_2">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="./imgs/product2.jpg" alt="" class="rounded-md">
+                    <h3 class="mt-5 text-Nike-black text-lg">
+                        Air Max 97
+                    </h3>
+                </div>
+                <hr class="border-b border-Nike-white">
+                <div class="flex p-6">
+                    <button type="button" class="flex-1 btn btn-orange hover:scale-110 hover:bg-Nike-red ">Buy Now</button>
+                </div>
+            </div>
+            <!-- card #3 -->
+            <div class="flex flex-col rounded-md shadow-md lg:mt-16" id="product_3">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="./imgs/products 3.jpg" alt="" class="rounded-md">
+                    <h3 class="mt-5 text-Nike-black text-lg">
+                        Air Max 97
+                    </h3>
+                </div>
+                <hr class="border-b border-Nike-white">
+                <div class="flex p-6">
+                    <button type="button" class="flex-1 btn btn-orange hover:scale-110 hover:bg-Nike-red ">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="bg-Nike-white py-20 ">
+        <div class="container">
+            <!-- heading -->
+            <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+                <h1 class="text-3xl text-center text-Nike-black">About Us</h1>
+                <p class="text-center text-Nike-grey mt-4">
+                    "Nike, a global leader, revolutionizes sports and fashion with innovation."
+                </p>
+            </div>
+            <!-- FAQ Items -->
+            <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">
+                        What is the history and evolution of Nike as a company?
+                    </span>
+                    <i class="text-Nike-orange fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">
+                        What is Nike's mission statement and core philosophy
+                    </span>
+                    <i class="text-Nike-orange fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">
+                        What are some popular Nike shoe models and their key features?
+                    </span>
+                    <i class="text-Nike-orange fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact us -->
+    <section class= "text-black py-20">
+        <div class="container">
+            <div class="sm:w-3/4 lg:w-2/4 mx-auto">
+                <p class="font-light uppercase text-center mb-8 text-Nike-orange text-2xl">50+ Millions customers Per Year </p>
+                <h1 class="text-3xl text-center uppercase">Stay With US</h1>
+                <div class="flex flex-col sm:flex-row gap-6 mt-9">
+                    <input type="text" placeholder="Enter Your Email Address" class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black shadow-md">
+                    <button type="button" class="btn btn-orange hover:scale-110 hover:bg-Nike-red uppercase">Contact US</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-Nike-orange py-8 flex flex-col items-center justify-center sm:flex-row sm:justify-between custom-mobile-fold">
+        <div class="flex items-center gap-2 mb-4 sm:mb-0 mx-20 flex-col justify-center sm:flex-row">
+            <img src="imgs/nike logo.png" alt="" class="w-16 md:w-20 lg:w-28 custom-logo-fold">
+            <ul class="flex text-Nike-black uppercase gap-2 text-xs custom-menu-fold">
+                <li class="cursor-pointer">Home</li>
+                <li class="cursor-pointer">Features</li>
+                <li class="cursor-pointer">Products</li>
+                <li class="cursor-pointer">About</li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Icons -->
+        <div class="flex gap-10 mx-20 custom-social-icons-fold ">
+            <i class="text-black text-2xl cursor-pointer fa-brands fa-facebook"></i>
+            <i class="text-black text-2xl cursor-pointer fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
